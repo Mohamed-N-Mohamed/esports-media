@@ -1,0 +1,101 @@
+/*custom colors*/
+:root {
+  --red: #ff2934;
+  --grey: #666666;
+  --black: #1a1a1a;
+}
+
+nav ul a {
+  color: var(--grey);
+  font-size: 16px;
+  font-weight: bold;
+}
+nav ul a:hover {
+  color: var(--red);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.br{
+  width: 100%;
+  border-bottom: 2px solid #e5e5e5;
+  margin-bottom: 16px;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.no-shadows {
+  box-shadow: none !important;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.second-nav {
+  height: 72px;
+  background-color: var(--black);
+}
+.second-nav ul li a {
+  color: #fff;
+}
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.flex li {
+  padding: 0 1rem;
+}
+.flex li a {
+  font-weight: bold;
+}
+.flex li a:hover {
+  color: var(--red);
+}
+.heading {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--red);
+}
+.main {
+}
+
+.h-img {
+
+}
+.d-flex-1{
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.d-flex-1 h3 {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.d-flex-1 p {
+  font-size: 14px;
+  line-height: 16px;
+}
+.img-big{
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .d-flex-1{
+    display: block;
+  }
+
+}
