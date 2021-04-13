@@ -10,31 +10,41 @@ nav ul a {
   font-size: 16px;
   font-weight: bold;
 }
+
 nav ul a:hover {
   color: var(--red);
 }
 img {
   max-width: 100%;
+
   height: auto;
 }
+.inherit {
+  color: inherit !important;
+}
 
-.br{
+.br {
   width: 100%;
   border-bottom: 2px solid #e5e5e5;
   margin-bottom: 16px;
 }
 
 p {
-  line-height: 2rem;
+  /* line-height: 2rem; */
 }
 
 .no-shadows {
   box-shadow: none !important;
 }
 
+.grey{
+  color: #e5e5e5;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  background-color: #ccc;
 }
 
 .second-nav {
@@ -46,8 +56,34 @@ body {
 }
 .flex {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   gap: 1rem;
 }
+.f-1{
+  display: flex;
+  justify-content: center;
+  align-items: center
+
+}
+.mt-1{
+margin-top: 5.2rem;
+
+}
+.p-2{
+  padding: 2rem;
+}
+
+.grid-2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 .flex li {
   padding: 0 1rem;
@@ -67,35 +103,79 @@ body {
 }
 
 .h-img {
-
 }
-.d-flex-1{
+.d-flex-1 {
   display: flex;
   gap: 16px;
   justify-content: center;
   align-items: center;
-  
-  
+
+}
+.d-flex-2 {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .d-flex-1 h3 {
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+ margin-bottom: -10px;
+
 }
 .d-flex-1 p {
   font-size: 14px;
   line-height: 16px;
+
 }
-.img-big{
+.img-big {
   display: block;
   height: 100%;
   width: 100%;
 }
 
-@media (max-width: 750px) {
-  .d-flex-1{
-    display: block;
-  }
+.flex div h4{
+  font-size: 24px;
+  color: var(--black);
+  font-weight: bold;
+
 
 }
+.bold{
+  font-weight: bold;
+}
+
+.sub-footer{
+  height: 200px;
+  /* background-color: #e5e5e5; */
+  background-color: var(--grey);
+}
+
+.sub-footer h5{
+  color: #e5e5e5;
+}
+.social-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 16px;
+}
+.fab {
+  color: #fff;
+}
+.main-footer{
+  background: var(--black);
+  color: #fff;
+  
+}
+
+
+@media (max-width: 750px) {
+  .d-flex-1 {
+    display: block;
+  }
+}
+
