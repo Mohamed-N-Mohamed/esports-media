@@ -169,4 +169,14 @@ body {
   .d-flex-1 {
     display: block;
   }
+  .flex {
+    display: block;
+  }
+  .heading {
+    text-align: center;
+  }
+
+  .second-nav {
+    display: none;
+  }
 }
