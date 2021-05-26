@@ -1,37 +1,58 @@
-// //get single champion
-// //https://api.pandascore.co/lol/champions/{lol_champion_id}
+//DOM
+const DOM = document.getElementById('upcoming-tournaments');
+const row = document.querySelector('.row');
+const table = document.querySelector('.responsive-table')
 
-//get ekko
-//`https://api.pandascore.co/lol/champions?token=${apiKey}&search[name]=ekko`
-https://api.pandascore.co/lol/tournaments/running
-//get lcs and eu
-
-//api key
-
-async function test(){
-  const res = await fetch('https://widgets.shadow.gg/api/v1/realtime/upcoming_fixtures?title=all&token=u8yvJcXTH8Sm3kg1n5C4pzJv&page=1')
-  const data = await res.json();
-  console.log(data)
+//Get Upcoming Tournaments
+async function getUpcomingtournaments(){
+  const response = await fetch(`http://localhost:3000/upcoming`);
+  const data = await response.json();
+  //send data to UI
+  createUI(data)
+ 
 }
 
 
+
+
+function createUI(tournaments){
+
+  const tournamentsDetails =  tournaments.map((matches) => {
+
+    console.log(matches)
+    return `
+    <thead>
+      <tr>
+          <th>Event</th>
+          <th>Begins At</th>
+          <th>Stream URl</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>${matches.event.game}</td>
+        <td>${matches.event.begin_at}</td>
+        <td>${matches.event.stream_url}</td>
+      </tr>
+   
+    </tbody>
+
+  
+    
+    `
+
+
+  }).join('')
 
 
   
 
-const apiKey = "Sd6r6q1oNMPtqCki-w2T2IlChM_HiKPo3HV7uSKOMHVDuTzG5lA";
 
-//search
-async function search() {
-  const response = await fetch(`http://localhost:3000/champion`);
-  const data = await response.json();
-  console.log(data);
+
+
+  table.innerHTML = tournamentsDetails
+  
 }
 
-
-
-
-// search();
-test();
-
-console.log("ITS WORKING");
+getUpcomingtournaments()

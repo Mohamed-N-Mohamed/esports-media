@@ -6,6 +6,6 @@ const route = express.Router();
 
 const apiPath = require("./axios");
 //get single champion
-route.get("/champion", apiPath.findEkko);
+route.get("/upcoming", apiPath.getUpcomingtournaments);
 
 module.exports = route;
